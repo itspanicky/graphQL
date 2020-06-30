@@ -6,6 +6,7 @@ const expressGraphQL = require("express-graphql");
 const app = express();
 const db = require("./config/keys").mongoURI;
 const User = require("./models/user");
+const Post = require("./models/post");
 const schema = require("./schema/schema");
 
 mongoose
