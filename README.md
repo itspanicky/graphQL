@@ -42,12 +42,25 @@ Simple Blogging App ultilizing graphQL technology.
 }
 
 ## Mutations
-1 Create new user:
+1. Create new user:
 mutation {
   newUser(name: "MutatedBot", email:"mutatedBot@test.com", password:"Password123!") {
     id,
     name,
     email,
+  }
+}
+
+2. Create new post:
+mutation {
+  newPost(title: "Mutated Post 1", body:"Hi, I'm MutatedBot", author:"5efab0a2996cef066ce31022") {
+    id,
+    title,
+    body,
+    author {
+      name,
+      email
+    }
   }
 }
 
